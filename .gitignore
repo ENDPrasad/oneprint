@@ -7,11 +7,11 @@ node_modules/
 # =========================
 # Environment files (all levels)
 # =========================
-.env
-.env.*
-**/.env
-**/.env.*
-**/.env/
+# .env
+# .env.*
+# **/.env
+# **/.env.*
+# **/.env/
 
 # =========================
 # Logs
