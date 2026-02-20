@@ -1,0 +1,13 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111827;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 300px;
+  background: #d1d5db;
+}
