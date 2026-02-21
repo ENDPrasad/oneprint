@@ -4,8 +4,8 @@ const ViewSection: React.FC = () => {
   const [link, setLink] = useState("");
 
   return (
-    <div className="flex flex-column gap-3">
-      <img src={viewImg} alt="view documents" className="w-12" />
+    <div className="flex flex-column gap-3 pt-6">
+      <img src={viewImg} alt="view documents" className="w-6" />
 
       <h3 className="m-0">View Documents</h3>
 
@@ -18,7 +18,7 @@ const ViewSection: React.FC = () => {
         value={link}
         onChange={(e) => setLink(e.target.value)}
         placeholder="Paste Link here"
-        className="p-3 border-1 border-300 border-round w-full"
+        className="p-3 border-1 border-300 border-round-md w-22rem"
       />
     </div>
   );

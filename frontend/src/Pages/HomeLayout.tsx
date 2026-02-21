@@ -12,9 +12,9 @@ const HomeLayout: React.FC = () => {
       <Navbar />
       <Hero />
 
-      <div className="grid justify-content-center px-6">
+      <div className="grid justify-content-center gap-5">
         {/* Left Section */}
-        <div className="col-12 md:col-5">
+        <div className="col-12 md:col-5 px-6 flex flex-column gap-4 py-3">
           <UploadSection />
           <LinkCreatedCard
             link="https://oneprint.com/234k9384"
@@ -24,12 +24,10 @@ const HomeLayout: React.FC = () => {
         </div>
 
         {/* Divider */}
-        <div className="hidden md:block col-1 flex justify-content-center">
-          <div className="vertical-divider"></div>
-        </div>
+          <div className="border-1 mb-8"></div>
 
         {/* Right Section */}
-        <div className="col-12 md:col-5">
+        <div className="col-12 md:col-5 px-6 flex flex-column gap-4 py-3">
           <ViewSection />
           <FileExtractedCard
             fileName="Aadhar.pdf"
