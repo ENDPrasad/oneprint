@@ -23,27 +23,20 @@ const scheduler = new SchedulerClient({
 
 class SchedulerService {
   static async scheduleDeletion(key, expiryDate) {
-    // SAFE schedule name (always < 64 chars)
     const scheduleName = `del-${Date.now()}-${uuidv4().slice(0, 8)}`;
 
-    // Convert to required format (remove Z and milliseconds)
-    const iso = expiryDate.toISOString();
-    const formatted = iso.split(".")[0]; // removes milliseconds and Z
+    // Proper format without milliseconds
+    const formatted = expiryDate.toISOString().replace(/\.\d{3}Z$/, "");
 
     await scheduler.send(
       new CreateScheduleCommand({
         Name: scheduleName,
-
         ScheduleExpression: `at(${formatted})`,
-
-        FlexibleTimeWindow: {
-          Mode: "OFF",
-        },
+        FlexibleTimeWindow: { Mode: "OFF" },
 
         Target: {
           Arn: process.env.DELETE_LAMBDA_ARN,
           RoleArn: process.env.SCHEDULER_ROLE_ARN,
-
           Input: JSON.stringify({
             bucket: process.env.S3_BUCKET,
             key: key,
