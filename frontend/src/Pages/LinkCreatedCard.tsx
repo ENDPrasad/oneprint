@@ -1,4 +1,6 @@
 import React from "react";
+import copyIcon from "../assets/copy-icon.svg";
+import shareIcon from "../assets/share-icon.svg";
 
 interface LinkCreatedCardProps {
   link: string;
@@ -19,7 +21,7 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
         Link created successfully
       </div>
 
-      <div className="p-3 flex justify-content-between flex-row gap-2 shadow-1">
+      <div className="p-3 flex justify-content-between flex-row gap-2 shadow-2">
         <div>
           <a href={link} className="text-blue-500 no-underline">
             <span className="text-blue-500">{link}</span>
@@ -34,8 +36,8 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
         </div>
 
         <div className="flex flex-column gap-2">
-          <div className="">Copyicon</div>
-          <div className="">shareIcon</div>
+          <div className="cursor-pointer mr-3"><img src={copyIcon} alt="Copy" style={{width:"1.5rem", height:"1.5rem" }}/></div>
+          <div className="cursor-pointer mr-3"><img src={shareIcon} alt="Share" style={{width:"1.5rem", height:"1.5rem"}}/></div>
         </div>
 
       </div>

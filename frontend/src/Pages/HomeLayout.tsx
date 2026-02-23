@@ -5,6 +5,9 @@ import UploadSection from "./UploadSection";
 import ViewSection from "./ViewSection";
 import LinkCreatedCard from "./LinkCreatedCard";
 import FileExtractedCard from "./FileExtractedCard";
+import About from "./About";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
 const HomeLayout: React.FC = () => {
   return (
@@ -36,6 +39,11 @@ const HomeLayout: React.FC = () => {
             onPrint={() => console.log("Print")}
           />
         </div>
+      </div>
+      <div>
+          <About/>
+          <ContactUs/>
+          <Footer/>
       </div>
     </>
   );

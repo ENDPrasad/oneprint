@@ -19,7 +19,7 @@ const UploadSection: React.FC = () => {
 
   return (
     <div className="flex flex-column gap-3">
-      <img src={uploadImg} alt="upload" className="w-6" />
+      <img src={uploadImg} alt="upload" className="" style={{width:"219px", height:"172px"}} />
 
       <h3 className="m-0">Upload File</h3>
 

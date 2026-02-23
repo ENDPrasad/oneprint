@@ -21,7 +21,7 @@ const FileExtractedCard: React.FC<FileExtractedCardProps> = ({
         File extracted successfully
       </div>
 
-      <div className="p-3 flex justify-content-between flex-row shadow-1">
+      <div className="p-3 flex justify-content-between lg:flex-row shadow-2 flex-column">
         <div>
           <a href="#" className="text-blue-500 no-underline font-medium">
             {fileName}
@@ -34,14 +34,14 @@ const FileExtractedCard: React.FC<FileExtractedCardProps> = ({
         <div className="flex gap-2">
           <button
             onClick={onView}
-            className="w-6rem border-round-right-3xl border-round-left-3xl cursor-pointer"
+            className="font-bold w-6rem border-round-2xl cursor-pointer text-white hover:bg-white hover:text-blue-900 hover:shadow-8 h-3rem"
           >
             View
           </button>
 
           <button
             onClick={onPrint}
-            className="w-6rem border-round-right-3xl border-round-left-3xl cursor-pointer text-white"
+            className="font-bold w-6rem border-round-2xl cursor-pointer text-white hover:bg-white hover:text-blue-900 hover:shadow-8 h-3rem"
             style={{ background: "#0b3d63" }}
           >
             Print
