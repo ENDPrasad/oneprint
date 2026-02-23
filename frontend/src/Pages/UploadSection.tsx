@@ -2,7 +2,11 @@ import React, { useRef } from "react";
 import uploadImg from "../assets/upload.svg";
 import uploadButton from "../assets/uploadButton.svg";
 
-const UploadSection: React.FC = () => {
+interface IUploadSection {
+  handleSubmit: (file: File) => void;
+}
+
+const UploadSection: React.FC<IUploadSection> = ({ handleSubmit }) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleButtonClick = () => {
@@ -12,8 +16,7 @@ const UploadSection: React.FC = () => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      console.log("Selected file:", file);
-      // 👉 Later you can upload this file to server here
+      handleSubmit(file);
     }
   };
 

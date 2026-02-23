@@ -15,9 +15,10 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
 }) => {
   return (
     <div className="flex flex-column gap-4 py-1">
-
-      <div className="text-center py-2 border-round-top"
-           style={{ background: "#cde8d2", color: "#1f5130" }}>
+      <div
+        className="text-center py-2 border-round-top"
+        style={{ background: "#cde8d2", color: "#1f5130" }}
+      >
         Link created successfully
       </div>
 
@@ -27,9 +28,11 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
             <span className="text-blue-500">{link}</span>
           </a>
           <div className="flex justify-content-between text-sm text-600">
-            <span>Print Frequency: <strong>{frequency}</strong></span>
-            <span>View: <strong>Once</strong></span>
+            <span>
+              Print Frequency: <strong>{frequency}</strong>
+            </span>
           </div>
+
           <div className="text-sm">
             Expires In: <strong>{expiresIn}</strong>
           </div>
@@ -39,12 +42,9 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
           <div className="cursor-pointer mr-3"><img src={copyIcon} alt="Copy" style={{width:"1.5rem", height:"1.5rem" }}/></div>
           <div className="cursor-pointer mr-3"><img src={shareIcon} alt="Share" style={{width:"1.5rem", height:"1.5rem"}}/></div>
         </div>
-
       </div>
-      
     </div>
   );
 };
-
 
 export default LinkCreatedCard;

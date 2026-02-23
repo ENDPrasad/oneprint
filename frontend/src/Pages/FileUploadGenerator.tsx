@@ -1,16 +1,8 @@
 import React, { useState, type ChangeEvent } from "react";
-
-interface UploadResponse {
-  message: string;
-  url: string;
-  expiresAt: string;
-  expiresInMinutes: number;
-}
-
-interface FileUploadGeneratorProps {
-  uploadUrl?: string;
-  defaultExpiryMinutes?: number;
-}
+import type {
+  FileUploadGeneratorProps,
+  UploadResponse,
+} from "../interfaces/interfaces";
 
 const FileUploadGenerator: React.FC<FileUploadGeneratorProps> = ({
   uploadUrl = import.meta.env.VITE_API_URL,
