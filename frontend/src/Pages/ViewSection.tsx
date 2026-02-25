@@ -22,12 +22,12 @@ const ViewSection: React.FC<IViewSection> = ({ setLink }) => {
   };
 
   return (
-    <div className="flex flex-column gap-3">
+    <div className="flex flex-column gap-3 align-items-center  md:flex md:flex-column md:align-items-start">
       <img src={viewImg} alt="view documents" className="" style={{width:"219px", height:"172px"}} />
 
       <h3 className="m-0">View Documents</h3>
 
-      <p className="text-600 m-0">
+      <p className="text-600 m-0 text-center md:text-start">
         Paste the shared link to see the shared documents.
       </p>
       <div>
