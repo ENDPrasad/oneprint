@@ -21,12 +21,12 @@ const UploadSection: React.FC<IUploadSection> = ({ handleSubmit }) => {
   };
 
   return (
-    <div className="flex flex-column gap-3">
-      <img src={uploadImg} alt="upload" className="w-6" />
+    <div className="flex flex-column gap-3 align-items-center  md:flex md:flex-column md:align-items-start">
+      <img src={uploadImg} alt="upload" className="" style={{width:"219px", height:"172px"}} />
 
       <h3 className="m-0">Upload File</h3>
 
-      <p className="text-600 m-0">
+      <p className="text-600 m-0 text-center md:text-start">
         Upload the file to generate the temporary access link.
       </p>
 

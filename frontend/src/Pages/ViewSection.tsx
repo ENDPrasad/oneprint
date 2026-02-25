@@ -22,12 +22,12 @@ const ViewSection: React.FC<IViewSection> = ({ setLink }) => {
   };
 
   return (
-    <div className="flex flex-column gap-3 pt-6">
-      <img src={viewImg} alt="view documents" className="w-6" />
+    <div className="flex flex-column gap-3 align-items-center  md:flex md:flex-column md:align-items-start">
+      <img src={viewImg} alt="view documents" className="" style={{width:"219px", height:"172px"}} />
 
       <h3 className="m-0">View Documents</h3>
 
-      <p className="text-600 m-0">
+      <p className="text-600 m-0 text-center md:text-start">
         Paste the shared link to see the shared documents.
       </p>
       <div>
@@ -36,7 +36,7 @@ const ViewSection: React.FC<IViewSection> = ({ setLink }) => {
           value={url}
           onChange={onChangeHandler}
           placeholder="Paste Link here"
-          className="p-3 border-1 border-300 border-round-md w-22rem"
+          className="p-3 bg-white border-2 border-round-md text-50"
         />
         {error && (
           <span className="text-red-400 text-sm pl-2">Invalid URL format</span>

@@ -1,4 +1,6 @@
 import React from "react";
+import copyIcon from "../assets/copy-icon.svg";
+import shareIcon from "../assets/share-icon.svg";
 
 interface LinkCreatedCardProps {
   link: string;
@@ -20,16 +22,11 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
         Link created successfully
       </div>
 
-      <div className="p-3 flex justify-content-between gap-2 shadow-1">
-        {/* IMPORTANT: min-w-0 allows shrinking inside flex */}
-        <div className="flex flex-column min-w-0 flex-1">
-          <a
-            href={link}
-            className="text-blue-200 no-underline block overflow-hidden white-space-nowrap text-overflow-ellipsis w-full"
-          >
-            {link}
+      <div className="p-3 flex justify-content-between flex-row gap-2 shadow-2">
+        <div>
+          <a href={link} className="text-blue-500 no-underline">
+            <span className="text-blue-500">{link}</span>
           </a>
-
           <div className="flex justify-content-between text-sm text-600">
             <span>
               Print Frequency: <strong>{frequency}</strong>
@@ -41,9 +38,9 @@ const LinkCreatedCard: React.FC<LinkCreatedCardProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-column gap-2 flex-shrink-0">
-          <div>Copyicon</div>
-          <div>shareIcon</div>
+        <div className="flex flex-column gap-2">
+          <div className="cursor-pointer mr-3"><img src={copyIcon} alt="Copy" style={{width:"1.5rem", height:"1.5rem" }}/></div>
+          <div className="cursor-pointer mr-3"><img src={shareIcon} alt="Share" style={{width:"1.5rem", height:"1.5rem"}}/></div>
         </div>
       </div>
     </div>
